@@ -6,6 +6,7 @@
 
 body {
   height: 100vh;
+  overflow: hidden;
   background: linear-gradient(#2e70ff, #dc53cf);
   color: #fff;
   font-size: 19px;
@@ -74,49 +75,67 @@ div.animation {
 }
 div.animation div {
   background: rgba(255, 255, 255, 0.3490196078);
+  overflow: hidden;
   -webkit-animation: divAni 10s linear infinite;
           animation: divAni 10s linear infinite;
-  overflow: hidden;
+  height: 100px;
+  width: 100px;
 }
 div.animation div.one {
-  height: 50px;
-  width: 60px;
+  height: 3s;
+  width: scale(0.2);
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
+  transform: scale(0.2);
 }
 div.animation div.two {
-  height: 60px;
-  width: 70px;
+  height: 6s;
+  width: scale(0.5);
   -webkit-animation-delay: 6s;
           animation-delay: 6s;
+  transform: scale(0.5);
 }
 div.animation div.three {
-  height: 70px;
-  width: 80px;
+  height: 0s;
+  width: scale(1.8);
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  transform: scale(1.8);
 }
 div.animation div.four {
-  height: 50px;
-  width: 60px;
+  height: 7s;
+  width: scale(0.3);
   -webkit-animation-delay: 7s;
           animation-delay: 7s;
+  transform: scale(0.3);
 }
 div.animation div.five {
-  height: 100px;
-  width: 90px;
+  height: 1s;
+  width: scale(2);
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
+  transform: scale(2);
 }
 div.animation div.six {
-  height: 70px;
-  width: 60px;
+  height: 2s;
+  width: scale(0.3);
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
+  transform: scale(0.3);
 }
 div.animation div.seven {
-  height: 120px;
-  width: 100px;
+  height: 5s;
+  width: scale(1.2);
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
+  transform: scale(1.2);
+}
+div.animation div.eight {
+  height: 2.5s;
+  width: scale(0.6);
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  transform: scale(0.6);
 }
 
 @-webkit-keyframes divAni {
@@ -135,7 +154,8 @@ div.animation div:before {
   position: absolute;
   left: 0;
   top: 0;
-  height: 120px;
+  overflow: hidden;
+  height: 100px;
   width: 30%;
   transform: skew(45deg) translateX(150px);
   background: rgba(255, 255, 255, 0.2);
@@ -151,20 +171,20 @@ div.animation div.two:before {
           animation-delay: 6s;
 }
 div.animation div.three:before {
-  -webkit-animation-delay: 10s;
-          animation-delay: 10s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 div.animation div.four:before {
   -webkit-animation-delay: 7s;
           animation-delay: 7s;
 }
 div.animation div.five:before {
-  -webkit-animation-delay: 11s;
-          animation-delay: 11s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
 }
 div.animation div.six:before {
-  -webkit-animation-delay: 9s;
-          animation-delay: 9s;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
 }
 div.animation div.seven:before {
   -webkit-animation-delay: 5s;

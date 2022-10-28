@@ -8,7 +8,7 @@
 
 body
   height: 100vh
-  // overflow: hidden
+  overflow: hidden
   background: linear-gradient($color1,$color2)
   color: #fff
   font-size: 19px
@@ -58,28 +58,26 @@ div.animation
   width: 100%
   div
     background: #ffffff59
-    animation: divAni 10s linear infinite
     overflow: hidden
+    animation: divAni 10s linear infinite
+    height: 100px
+    width: 100px
   div.one
-    +divAnime(50px,60px)
-    animation-delay: 3s
+    +divAnime(3s,scale(0.2))
   div.two
-    +divAnime(60px,70px)
-    animation-delay: 6s
+    +divAnime(6s,scale(0.5))
   div.three
-    +divAnime(70px,80px)
+    +divAnime(0s,scale(1.8))
   div.four
-    +divAnime(50px,60px)
-    animation-delay: 7s
+    +divAnime(7s,scale(0.3))
   div.five
-    +divAnime(100px,90px)
-    animation-delay: 1s
+    +divAnime(1s,scale(2))
   div.six
-    +divAnime(70px,60px)
-    animation-delay: 2s
+    +divAnime(2s,scale(0.3))
   div.seven
-    +divAnime(120px,100px)
-    animation-delay: 5s
+    +divAnime(5s,scale(1.2))
+  div.eight
+    +divAnime(2.5s,scale(0.6))
 
 @keyframes divAni
   100%
@@ -91,7 +89,8 @@ div.animation
     position: absolute
     left: 0
     top: 0
-    height: 120px
+    overflow: hidden
+    height: 100px
     width: 30%
     transform: skew(45deg) translateX(150px)
     background: rgba(255,255,255,0.2)
@@ -101,17 +100,16 @@ div.animation
   div.two:before
     animation-delay: 6s
   div.three:before
-    animation-delay: 10s
+    animation-delay: 2s
   div.four:before
     animation-delay: 7s
   div.five:before
-    animation-delay: 11s
+    animation-delay: 5s
   div.six:before
-    animation-delay: 9s
+    animation-delay: 8s
   div.seven:before
     animation-delay: 5s
 
 @keyframes mirror
   100%
     transform: translateX(-450px)
-
