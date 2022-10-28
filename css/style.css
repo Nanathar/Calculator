@@ -42,7 +42,9 @@ div.calculator div.result div.color {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background: linear-gradient(#c55353, #6259e4);
+  background: linear-gradient(#dc53cf, #2e70ff);
+  border-top: 1px solid rgba(255, 255, 255, 0.5019607843);
+  border-left: 1px solid rgba(255, 255, 255, 0.5019607843);
   cursor: pointer;
 }
 div.calculator div.buttons {
