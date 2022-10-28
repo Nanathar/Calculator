@@ -1,0 +1,30 @@
+@import variables
+@import mixins
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+body
+  min-height: 100vh
+  background: linear-gradient($color1,$color2)
+  font-family: Arial, Helvetica, sans-serif
+
+div.calculator
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  height: 600px
+  width: 500px
+  background-color: red
+  display: flex
+  flex-direction: column
+  div.result
+    flex-grow: 0.2
+  div.buttons
+    flex-grow: 0.8
+    display: grid
+    div
+      
