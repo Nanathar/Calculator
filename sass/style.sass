@@ -9,11 +9,14 @@
 body
   height: 100vh
   overflow: hidden
-  background: linear-gradient($color1,$color2)
+  background: linear-gradient($color1,$color1A)
   color: #fff
   font-size: 19px
   font-family: Arial, Helvetica, sans-serif
   +flex(center,center)
+body.active
+  background: linear-gradient($color2,$color2A)
+  color: black
 
 div.calculator
   display: flex
@@ -29,16 +32,27 @@ div.calculator
     +flex(right, center)
     padding-right: 20px
     font-size: 25px
+    div.stop-start-animation,
     div.color
       position: absolute
       top: 2%
       height: 20px
       width: 20px
       border-radius: 50%
-      background: linear-gradient($color2,$color1)
+      background: linear-gradient($color1A,$color1)
       border-top: 1px solid $border
       border-left: 1px solid $border
       cursor: pointer
+      font-size: 11px
+      text-align: center
+      line-height: 20px
+    div.color
+      left: 83%
+  div.active
+    div.stop-start-animation,
+    div.color
+      background: linear-gradient($color2A,$color2)
+      border-style: none
   div.buttons
     flex-grow: 1
     display: grid
@@ -68,11 +82,11 @@ div.animation
   div.two
     +divAnime(6s,scale(0.5))
   div.three
-    +divAnime(0s,scale(1.7))
+    +divAnime(0s,scale(1.9))
   div.four
     +divAnime(7s,scale(0.3))
   div.five
-    +divAnime(1s,scale(1.9))
+    +divAnime(1s,scale(1.5))
   div.six
     +divAnime(2s,scale(0.3))
   div.seven
@@ -114,3 +128,6 @@ div.animation
 @keyframes mirror
   100%
     transform: translateX(-450px)
+
+div.stop
+  display: none

@@ -16,6 +16,11 @@ body {
   align-items: center;
 }
 
+body.active {
+  background: linear-gradient(#dadee6, #555255);
+  color: black;
+}
+
 div.calculator {
   display: flex;
   flex-direction: column;
@@ -36,6 +41,7 @@ div.calculator div.result {
   padding-right: 20px;
   font-size: 25px;
 }
+div.calculator div.result div.stop-start-animation,
 div.calculator div.result div.color {
   position: absolute;
   top: 2%;
@@ -46,6 +52,17 @@ div.calculator div.result div.color {
   border-top: 1px solid rgba(255, 255, 255, 0.5019607843);
   border-left: 1px solid rgba(255, 255, 255, 0.5019607843);
   cursor: pointer;
+  font-size: 11px;
+  text-align: center;
+  line-height: 20px;
+}
+div.calculator div.result div.color {
+  left: 83%;
+}
+div.calculator div.active div.stop-start-animation,
+div.calculator div.active div.color {
+  background: linear-gradient(#555255, #dadee6);
+  border-style: none;
 }
 div.calculator div.buttons {
   flex-grow: 1;
@@ -98,10 +115,10 @@ div.animation div.two {
 }
 div.animation div.three {
   height: 0s;
-  width: scale(1.7);
+  width: scale(1.9);
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
-  transform: scale(1.7);
+  transform: scale(1.9);
 }
 div.animation div.four {
   height: 7s;
@@ -112,10 +129,10 @@ div.animation div.four {
 }
 div.animation div.five {
   height: 1s;
-  width: scale(1.9);
+  width: scale(1.5);
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
-  transform: scale(1.9);
+  transform: scale(1.5);
 }
 div.animation div.six {
   height: 2s;
@@ -202,4 +219,7 @@ div.animation div.seven:before {
   100% {
     transform: translateX(-450px);
   }
+}
+div.stop {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
