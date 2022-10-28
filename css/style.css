@@ -101,57 +101,41 @@ div.animation div {
   width: 100px;
 }
 div.animation div.one {
-  height: 3s;
-  width: scale(0.2);
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
   transform: scale(0.2);
 }
 div.animation div.two {
-  height: 6s;
-  width: scale(0.5);
   -webkit-animation-delay: 6s;
           animation-delay: 6s;
   transform: scale(0.5);
 }
 div.animation div.three {
-  height: 0s;
-  width: scale(1.9);
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
   transform: scale(1.9);
 }
 div.animation div.four {
-  height: 7s;
-  width: scale(0.3);
   -webkit-animation-delay: 7s;
           animation-delay: 7s;
   transform: scale(0.3);
 }
 div.animation div.five {
-  height: 1s;
-  width: scale(1.5);
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
   transform: scale(1.5);
 }
 div.animation div.six {
-  height: 2s;
-  width: scale(0.3);
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
   transform: scale(0.3);
 }
 div.animation div.seven {
-  height: 5s;
-  width: scale(1.2);
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
   transform: scale(1.2);
 }
 div.animation div.eight {
-  height: 2.5s;
-  width: scale(0.6);
   -webkit-animation-delay: 2.5s;
           animation-delay: 2.5s;
   transform: scale(0.6);
