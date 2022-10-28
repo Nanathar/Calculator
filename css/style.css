@@ -35,6 +35,16 @@ div.calculator div.result {
   padding-right: 20px;
   font-size: 25px;
 }
+div.calculator div.result:before {
+  content: "";
+  position: absolute;
+  top: 2%;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+}
 div.calculator div.buttons {
   flex-grow: 1;
   display: grid;
@@ -63,7 +73,7 @@ div.animation {
   width: 100%;
 }
 div.animation div {
-  background: rgba(255, 255, 255, 0.1882352941);
+  background: rgba(255, 255, 255, 0.3490196078);
   -webkit-animation: divAni 10s linear infinite;
           animation: divAni 10s linear infinite;
   overflow: hidden;

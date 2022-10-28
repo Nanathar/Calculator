@@ -29,6 +29,15 @@ div.calculator
     +flex(right, center)
     padding-right: 20px
     font-size: 25px
+  div.result:before
+    content: ''
+    position: absolute
+    top: 2%
+    height: 20px
+    width: 20px
+    border-radius: 50%
+    background: black
+    cursor: pointer
   div.buttons
     flex-grow: 1
     display: grid
@@ -48,7 +57,7 @@ div.animation
   +flex(space-around,flex-start)
   width: 100%
   div
-    background: #ffffff30
+    background: #ffffff59
     animation: divAni 10s linear infinite
     overflow: hidden
   div.one
