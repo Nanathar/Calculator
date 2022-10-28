@@ -96,10 +96,10 @@ div.animation div.two {
 }
 div.animation div.three {
   height: 0s;
-  width: scale(1.8);
+  width: scale(1.7);
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
-  transform: scale(1.8);
+  transform: scale(1.7);
 }
 div.animation div.four {
   height: 7s;
@@ -110,10 +110,10 @@ div.animation div.four {
 }
 div.animation div.five {
   height: 1s;
-  width: scale(2);
+  width: scale(1.9);
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
-  transform: scale(2);
+  transform: scale(1.9);
 }
 div.animation div.six {
   height: 2s;
