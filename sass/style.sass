@@ -7,12 +7,13 @@
   box-sizing: border-box
 
 body
-  min-height: 100vh
+  height: 100vh
+  // overflow: hidden
   background: linear-gradient($color1,$color2)
   color: #fff
   font-size: 19px
   font-family: Arial, Helvetica, sans-serif
-  +flex(center)
+  +flex(center,center)
 
 div.calculator
   display: flex
@@ -25,7 +26,7 @@ div.calculator
   border-left: 1px solid $border
   div.result
     flex-grow: 0.35
-    +flex(right)
+    +flex(right, center)
     padding-right: 20px
     font-size: 25px
   div.buttons
@@ -35,7 +36,7 @@ div.calculator
     justify-items: center
     cursor: pointer
     div
-      +flex(center)
+      +flex(center,center)
       height: 80%
       width: 80%
     div:hover
@@ -43,13 +44,64 @@ div.calculator
 
 div.animation
   position: absolute
+  bottom: -17%
+  +flex(space-around,flex-start)
   width: 100%
-  bottom: 0
-  display: flex
-  justify-content: space-around
   div
-    height: 40px
-    width: 40px
-    background: $bcg
+    background: #ffffff30
+    animation: divAni 10s linear infinite
+    overflow: hidden
   div.one
-    +divAnime()
+    +divAnime(50px,60px)
+    animation-delay: 3s
+  div.two
+    +divAnime(60px,70px)
+    animation-delay: 6s
+  div.three
+    +divAnime(70px,80px)
+  div.four
+    +divAnime(50px,60px)
+    animation-delay: 7s
+  div.five
+    +divAnime(100px,90px)
+    animation-delay: 1s
+  div.six
+    +divAnime(70px,60px)
+    animation-delay: 2s
+  div.seven
+    +divAnime(120px,100px)
+    animation-delay: 5s
+
+@keyframes divAni
+  100%
+    transform: translateY(calc( (100vh - 550px) / 2 - 100vh ))
+
+div.animation
+  div:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    height: 120px
+    width: 30%
+    transform: skew(45deg) translateX(150px)
+    background: rgba(255,255,255,0.2)
+    animation: mirror 3s linear infinite
+  div.one:before
+    animation-delay: 3s
+  div.two:before
+    animation-delay: 6s
+  div.three:before
+    animation-delay: 10s
+  div.four:before
+    animation-delay: 7s
+  div.five:before
+    animation-delay: 11s
+  div.six:before
+    animation-delay: 9s
+  div.seven:before
+    animation-delay: 5s
+
+@keyframes mirror
+  100%
+    transform: translateX(-450px)

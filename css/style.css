@@ -5,14 +5,14 @@
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   background: linear-gradient(#2e70ff, #dc53cf);
   color: #fff;
   font-size: 19px;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 div.calculator {
@@ -20,7 +20,7 @@ div.calculator {
   flex-direction: column;
   height: 550px;
   width: 400px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1098039216);
   border-radius: 20px;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
@@ -30,8 +30,8 @@ div.calculator {
 div.calculator div.result {
   flex-grow: 0.35;
   display: flex;
-  align-items: center;
   justify-content: right;
+  align-items: center;
   padding-right: 20px;
   font-size: 25px;
 }
@@ -44,25 +44,131 @@ div.calculator div.buttons {
 }
 div.calculator div.buttons div {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 80%;
   width: 80%;
 }
 div.calculator div.buttons div:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1098039216);
   border-radius: 20px;
 }
 
 div.animation {
   position: absolute;
-  width: 100%;
-  bottom: 0;
+  bottom: -17%;
   display: flex;
   justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
 }
 div.animation div {
-  height: 40px;
-  width: 40px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1882352941);
+  -webkit-animation: divAni 10s linear infinite;
+          animation: divAni 10s linear infinite;
+  overflow: hidden;
+}
+div.animation div.one {
+  height: 50px;
+  width: 60px;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+div.animation div.two {
+  height: 60px;
+  width: 70px;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+div.animation div.three {
+  height: 70px;
+  width: 80px;
+}
+div.animation div.four {
+  height: 50px;
+  width: 60px;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+}
+div.animation div.five {
+  height: 100px;
+  width: 90px;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+div.animation div.six {
+  height: 70px;
+  width: 60px;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+div.animation div.seven {
+  height: 120px;
+  width: 100px;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+@-webkit-keyframes divAni {
+  100% {
+    transform: translateY(calc((100vh - 550px) / 2 - 100vh));
+  }
+}
+
+@keyframes divAni {
+  100% {
+    transform: translateY(calc((100vh - 550px) / 2 - 100vh));
+  }
+}
+div.animation div:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 120px;
+  width: 30%;
+  transform: skew(45deg) translateX(150px);
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-animation: mirror 3s linear infinite;
+          animation: mirror 3s linear infinite;
+}
+div.animation div.one:before {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+div.animation div.two:before {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+div.animation div.three:before {
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+}
+div.animation div.four:before {
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+}
+div.animation div.five:before {
+  -webkit-animation-delay: 11s;
+          animation-delay: 11s;
+}
+div.animation div.six:before {
+  -webkit-animation-delay: 9s;
+          animation-delay: 9s;
+}
+div.animation div.seven:before {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+@-webkit-keyframes mirror {
+  100% {
+    transform: translateX(-450px);
+  }
+}
+
+@keyframes mirror {
+  100% {
+    transform: translateX(-450px);
+  }
 }/*# sourceMappingURL=style.css.map */
