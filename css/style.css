@@ -36,8 +36,7 @@ div.calculator div.result {
   padding-right: 20px;
   font-size: 25px;
 }
-div.calculator div.result:before {
-  content: "";
+div.calculator div.result div.color {
   position: absolute;
   top: 2%;
   height: 20px;

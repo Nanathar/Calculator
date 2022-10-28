@@ -1,6 +1,6 @@
-const btnStopAni = document.querySelector('div.result:before');
+const div = document.querySelector('div.color')
 
-btnStopAni.addEventListener('click', () => {
-  console.log('ok')
-  document.querySelector('div.animation').classList.toggle('.stop')
+div.addEventListener('click', () => {
+
+
 })
