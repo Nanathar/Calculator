@@ -1,3 +1,45 @@
+
+
+
+
+
+
+const numberButtons = document.querySelectorAll
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Przyciski zmian koloru i stop Animacji
 const divResult = document.querySelector('div.result')
 
@@ -8,4 +50,3 @@ divResult.addEventListener('click', (div) => {
     document.body.classList.toggle('active');
   }
 })
-

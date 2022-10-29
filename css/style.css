@@ -38,6 +38,7 @@ div.calculator {
           backdrop-filter: blur(5px);
   border-top: 1px solid rgba(255, 255, 255, 0.5019607843);
   border-left: 1px solid rgba(255, 255, 255, 0.5019607843);
+  z-index: 999;
 }
 div.calculator div.result {
   flex-grow: 0.35;
