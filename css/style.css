@@ -245,8 +245,7 @@ div.calculator div.result div.color {
     font-size: 17px;
   }
   div.calculator {
-    margin-top: 20px;
-    height: 270px;
+    height: 240px;
     width: 370px;
   }
   div.calculator div.result {

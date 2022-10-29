@@ -13,12 +13,7 @@
   @if $breakpoint == phone
     @media (max-width: 450px)
       @content
-  @if $breakpoint == tab-port
+  @if $breakpoint == land
     @media (max-width: 900px) and (orientation: landscape)
       @content
-  // @if $breakpoint == tab-land
-  //   @media (max-width: 1024px)
-  //     @content
-  // @if $breakpoint == big-desktop
-  //   @media (max-width: 1800px)
-  //     @content
+
