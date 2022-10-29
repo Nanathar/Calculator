@@ -243,14 +243,10 @@ div.calculator div.result div.color {
 @media (max-width: 1100px) and (orientation: landscape) {
   body {
     font-size: 17px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 10px;
   }
   div.calculator {
-    height: 220px;
-    width: 350px;
+    height: 270px;
+    width: 370px;
   }
   div.calculator div.result {
     flex-grow: 0.3;
