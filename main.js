@@ -4,6 +4,7 @@ class Calculator {
     this.current = current
     this.clear()
   }
+
   clear() {
     this.currentOperand = ''
     this.previousOperand = ''
@@ -11,26 +12,72 @@ class Calculator {
   }
 
   delete() {
-
+    this.currentOperand = this.currentOperand.toString().slice(0, -1)
   }
 
   appendNumber(number) {
+    if (number === '.' && this.currentOperand.includes('.')) return
+    if (number === '.' && this.currentOperand === '') return this.currentOperand = '0.'
     this.currentOperand = this.currentOperand.toString() + number.toString();
   }
+
   chooseOperation(operation) {
+    if (this.currentOperand === '') return
+    if (this.previousOperand !== '') {
+      this.compute()
+    }
+    this.operation = operation
+    this.previousOperand = this.currentOperand
+    this.currentOperand = ''
 
   }
+
   compute() {
+    let computation
+    const prev = parseFloat(this.previousOperand)
+    const curr = parseFloat(this.currentOperand)
+    if (isNaN(prev) || isNaN(curr)) return
+    switch (this.operation) {
+      case '+':
+        computation = prev + curr
+        break
+      case '-':
+        computation = prev - curr
+        break
+      case '*':
+        computation = prev * curr
+        break
+      case '÷':
+        computation = prev / curr
+        break
+        // case '%':
+        //   computation = curr / 100
+        //   break
+      default:
+        return
+    }
+    this.currentOperand = computation
+    this.operation = undefined
+    this.previousOperand = ''
+
+    // case '+':
+    //   computation = prev + current
+    //   break
+  }
+
+  getDisplayNumber(number) {
 
   }
+
   updateDisplay() {
     this.current.innerText = this.currentOperand
+    this.previous.innerText = this.previousOperand
   }
 
 }
 
 const numberDiv = document.querySelectorAll('.number');
-const operationDiv = document.querySelectorAll('.operator');
+const operationDiv = document.querySelectorAll('.operation');
 const clearAll = document.querySelector('.clear-all');
 const clear = document.querySelector('.clear');
 const equals = document.querySelector('.equals');
@@ -48,10 +95,27 @@ numberDiv.forEach(div => {
   })
 })
 
+operationDiv.forEach(div => {
+  div.addEventListener('click', () => {
+    calculator.chooseOperation(div.innerText);
+    calculator.updateDisplay();
+  })
+})
 
+equals.addEventListener('click', () => {
+  calculator.compute()
+  calculator.updateDisplay()
+})
 
+clearAll.addEventListener('click', () => {
+  calculator.clear()
+  calculator.updateDisplay()
+})
 
-
+clear.addEventListener('click', () => {
+  calculator.delete()
+  calculator.updateDisplay()
+})
 
 
 

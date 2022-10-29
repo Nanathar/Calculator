@@ -11,7 +11,6 @@ body
   overflow: hidden
   background: linear-gradient($color1,$color1A)
   color: #fff
-  font-size: 19px
   font-family: Arial, Helvetica, sans-serif
   +flex(center,center)
   transition: all .2s linear
@@ -38,13 +37,16 @@ div.calculator
   div.result
     flex-grow: 0.2
     +flex(right, center)
-    padding-right: 20px
+    padding: 0 20px 0 0
     div.previous-operand
-      display: none
+      // display: none
+      position: absolute
+      top: 8%
     div.current-operand
-      height: 20px
-      margin-top: 20px
+      height: 30px
+      margin: 30px 0 -20px
       font-size: 27px
+      overflow: hidden
     div.stop-start-animation,
     div.color
       position: absolute
@@ -67,6 +69,7 @@ div.calculator
     grid-template-columns: 1fr 1fr 1fr 1fr
     justify-items: center
     cursor: pointer
+    font-size: 22px
     div
       +flex(center,center)
       height: 90%
@@ -144,9 +147,6 @@ div.stop
   display: none
 
 +mq(phone)
-  body
-    font-size: 14px
-
   div.calculator
     height: 300px
     width: 200px
@@ -154,6 +154,8 @@ div.stop
       flex-grow: 0.25
       font-size: 17px
       margin-top: 10px
+      div.current-operand
+        font-size: 22px
       div.stop-start-animation,
       div.color
         height: 15px
@@ -162,6 +164,8 @@ div.stop
         line-height: 15px
       div.color
         left: 73%
+    div.buttons
+      font-size: 14px
 
   div.animation
     div
@@ -171,9 +175,6 @@ div.stop
       display: none
 
 +mq(land)
-  body
-    font-size: 17px
-
   div.calculator
     height: 270px
     width: 370px
@@ -181,6 +182,9 @@ div.stop
       flex-grow: 0.3
       font-size: 18px
       margin-top: 11px
+      div.current-operand
+        font-size: 22px
+        margin: 20px 0 0
       div.stop-start-animation,
       div.color
         height: 15px
@@ -189,6 +193,8 @@ div.stop
         line-height: 15px
       div.color
         left: 85%
+    div.buttons
+      font-size: 17px
   div.animation
     div
       height: 30px
