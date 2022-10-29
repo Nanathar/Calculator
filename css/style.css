@@ -207,4 +207,71 @@ div.animation div.seven:before {
 }
 div.stop {
   display: none;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  div.calculator {
+    height: 300px;
+    width: 200px;
+  }
+  div.calculator div.result {
+    flex-grow: 0.25;
+    font-size: 17px;
+    margin-top: 10px;
+  }
+  div.calculator div.result div.stop-start-animation,
+div.calculator div.result div.color {
+    height: 15px;
+    width: 15px;
+    font-size: 9px;
+    line-height: 15px;
+  }
+  div.calculator div.result div.color {
+    left: 73%;
+  }
+  div.animation div {
+    height: 40px;
+    width: 40px;
+  }
+  div.animation div.one {
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+    transform: scale(0.3);
+  }
+  div.animation div.two {
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s;
+    transform: scale(0.5);
+  }
+  div.animation div.three {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    transform: scale(1.8);
+  }
+  div.animation div.four {
+    -webkit-animation-delay: 7s;
+            animation-delay: 7s;
+    transform: scale(0.4);
+  }
+  div.animation div.five {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    transform: scale(1.4);
+  }
+  div.animation div.six {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    transform: scale(0.4);
+  }
+  div.animation div.seven {
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+    transform: scale(1.2);
+  }
+  div.animation div.eight {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

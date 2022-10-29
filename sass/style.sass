@@ -133,3 +133,44 @@ div.animation
 
 div.stop
   display: none
+
++mq(phone)
+  body
+    font-size: 14px
+
+  div.calculator
+    height: 300px
+    width: 200px
+    div.result
+      flex-grow: 0.25
+      font-size: 17px
+      margin-top: 10px
+      div.stop-start-animation,
+      div.color
+        height: 15px
+        width: 15px
+        font-size: 9px
+        line-height: 15px
+      div.color
+        left: 73%
+
+  div.animation
+    div
+      height: 40px
+      width: 40px
+    div.one
+      +divAnime(3s,scale(0.3))
+    div.two
+      +divAnime(6s,scale(0.5))
+    div.three
+      +divAnime(0s,scale(1.8))
+    div.four
+      +divAnime(7s,scale(0.4))
+    div.five
+      +divAnime(1s,scale(1.4))
+    div.six
+      +divAnime(2s,scale(0.4))
+    div.seven
+      +divAnime(5s,scale(1.2))
+    div.eight
+      display: none
