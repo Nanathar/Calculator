@@ -70,8 +70,10 @@ class Calculator {
   }
 
   updateDisplay() {
-    this.current.innerText = this.currentOperand
-    this.previous.innerText = this.previousOperand
+    this.current.innerText = this.getDisplayNumber(currentOperand)
+    if (this.operation != null) {
+      this.previous.innerText = `${this.getDisplayNumber(currentOperand)} ${this.operation}`
+    }
   }
 
 }
