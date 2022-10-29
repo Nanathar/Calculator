@@ -1,7 +1,8 @@
 class Calculator {
-  constructor(previousOperandTextElement, currentOperandTextElement) {
-    this.previousOperandTextElement = previousOperandTextElement
-    this.currentOperandTextElement = currentOperandTextElement
+  constructor(previous, current) {
+    this.previous = previous
+    this.current = current
+    this.clear()
   }
   clear() {
     this.currentOperand = ''
@@ -12,17 +13,18 @@ class Calculator {
   delete() {
 
   }
+
   appendNumber(number) {
-    this.currentOperand = number;
+    this.currentOperand = this.currentOperand.toString() + number.toString();
   }
   chooseOperation(operation) {
 
   }
-  computer() {
+  compute() {
 
   }
   updateDisplay() {
-    this.currentOperandTextElement.innerText = this.currentOperand
+    this.current.innerText = this.currentOperand
   }
 
 }
@@ -33,11 +35,11 @@ const clearAll = document.querySelector('.clear-all');
 const clear = document.querySelector('.clear');
 const equals = document.querySelector('.equals');
 const result = document.querySelector('.result');
-const currentOperandTextElement = document.querySelector('.current-operand');
-const previousOperandTextElement = document.querySelector('.previous-operand');
+const current = document.querySelector('.current-operand');
+const previous = document.querySelector('.previous-operand');
 
 
-const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement);
+const calculator = new Calculator(previous, current);
 
 numberDiv.forEach(div => {
   div.addEventListener('click', () => {

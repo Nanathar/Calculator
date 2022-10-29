@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.5s;
+  transition: all 0.2s linear;
 }
 
 body.active {
@@ -41,18 +41,19 @@ div.calculator {
   z-index: 999;
 }
 div.calculator div.result {
-  flex-grow: 0.25;
+  flex-grow: 0.2;
   display: flex;
   justify-content: right;
   align-items: center;
   padding-right: 20px;
-  font-size: 25px;
 }
 div.calculator div.result div.previous-operand {
   display: none;
 }
 div.calculator div.result div.current-operand {
   height: 20px;
+  margin-top: 20px;
+  font-size: 27px;
 }
 div.calculator div.result div.stop-start-animation,
 div.calculator div.result div.color {
@@ -73,7 +74,7 @@ div.calculator div.result div.color {
   left: 83%;
 }
 div.calculator div.buttons {
-  flex-grow: 0.75;
+  flex-grow: 0.8;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
@@ -83,8 +84,8 @@ div.calculator div.buttons div {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80%;
-  width: 80%;
+  height: 90%;
+  width: 90%;
   transition: all 0.3s linear;
   border-radius: 20px;
 }

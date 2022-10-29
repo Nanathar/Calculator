@@ -14,7 +14,7 @@ body
   font-size: 19px
   font-family: Arial, Helvetica, sans-serif
   +flex(center,center)
-  transition: .5s
+  transition: all .2s linear
 body.active
   background: linear-gradient($color2,$color2A)
   color: black
@@ -36,14 +36,15 @@ div.calculator
   border-left: 1px solid $border
   z-index: 999
   div.result
-    flex-grow: 0.25
+    flex-grow: 0.2
     +flex(right, center)
     padding-right: 20px
-    font-size: 25px
     div.previous-operand
       display: none
     div.current-operand
       height: 20px
+      margin-top: 20px
+      font-size: 27px
     div.stop-start-animation,
     div.color
       position: absolute
@@ -61,15 +62,15 @@ div.calculator
     div.color
       left: 83%
   div.buttons
-    flex-grow: 0.75
+    flex-grow: 0.8
     display: grid
     grid-template-columns: 1fr 1fr 1fr 1fr
     justify-items: center
     cursor: pointer
     div
       +flex(center,center)
-      height: 80%
-      width: 80%
+      height: 90%
+      width: 90%
       transition: all .3s linear
       border-radius: 20px
     div:hover
