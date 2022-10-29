@@ -21,6 +21,11 @@ body.active {
   background: linear-gradient(#dadee6, #555255);
   color: black;
 }
+body.active div.calculator div.result div.stop-start-animation,
+body.active div.calculator div.result div.color {
+  background: linear-gradient(#555255, #dadee6);
+  border-style: none;
+}
 
 div.calculator {
   display: flex;
@@ -59,11 +64,6 @@ div.calculator div.result div.color {
 }
 div.calculator div.result div.color {
   left: 83%;
-}
-div.calculator div.active div.stop-start-animation,
-div.calculator div.active div.color {
-  background: linear-gradient(#555255, #dadee6);
-  border-style: none;
 }
 div.calculator div.buttons {
   flex-grow: 1;

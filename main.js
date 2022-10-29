@@ -6,7 +6,6 @@ divResult.addEventListener('click', (div) => {
     document.querySelector('div.animation').classList.toggle('stop')
   } else if (div.target.classList.contains('color')) {
     document.body.classList.toggle('active');
-    divResult.classList.toggle('active')
   }
 })
 

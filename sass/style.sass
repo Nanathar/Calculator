@@ -18,6 +18,12 @@ body
 body.active
   background: linear-gradient($color2,$color2A)
   color: black
+  div.calculator
+    div.result
+      div.stop-start-animation,
+      div.color
+        background: linear-gradient($color2A,$color2)
+        border-style: none
 
 div.calculator
   display: flex
@@ -49,11 +55,6 @@ div.calculator
       line-height: 20px
     div.color
       left: 83%
-  div.active
-    div.stop-start-animation,
-    div.color
-      background: linear-gradient($color2A,$color2)
-      border-style: none
   div.buttons
     flex-grow: 1
     display: grid
