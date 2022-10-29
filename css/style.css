@@ -78,6 +78,8 @@ div.calculator div.buttons div {
   align-items: center;
   height: 80%;
   width: 80%;
+  transition: all 0.3s linear;
+  border-radius: 20px;
 }
 div.calculator div.buttons div:hover {
   background: rgba(255, 255, 255, 0.1098039216);
