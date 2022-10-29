@@ -36,10 +36,14 @@ div.calculator
   border-left: 1px solid $border
   z-index: 999
   div.result
-    flex-grow: 0.35
+    flex-grow: 0.25
     +flex(right, center)
     padding-right: 20px
     font-size: 25px
+    div.previous-operand
+      display: none
+    div.current-operand
+      height: 20px
     div.stop-start-animation,
     div.color
       position: absolute
@@ -57,7 +61,7 @@ div.calculator
     div.color
       left: 83%
   div.buttons
-    flex-grow: 1
+    flex-grow: 0.75
     display: grid
     grid-template-columns: 1fr 1fr 1fr 1fr
     justify-items: center
@@ -76,6 +80,7 @@ div.animation
   bottom: -17%
   +flex(space-around,flex-start)
   width: 100%
+  display: none
   div
     background: #ffffff59
     overflow: hidden

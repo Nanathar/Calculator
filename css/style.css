@@ -41,12 +41,18 @@ div.calculator {
   z-index: 999;
 }
 div.calculator div.result {
-  flex-grow: 0.35;
+  flex-grow: 0.25;
   display: flex;
   justify-content: right;
   align-items: center;
   padding-right: 20px;
   font-size: 25px;
+}
+div.calculator div.result div.previous-operand {
+  display: none;
+}
+div.calculator div.result div.current-operand {
+  height: 20px;
 }
 div.calculator div.result div.stop-start-animation,
 div.calculator div.result div.color {
@@ -67,7 +73,7 @@ div.calculator div.result div.color {
   left: 83%;
 }
 div.calculator div.buttons {
-  flex-grow: 1;
+  flex-grow: 0.75;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
@@ -94,6 +100,7 @@ div.animation {
   justify-content: space-around;
   align-items: flex-start;
   width: 100%;
+  display: none;
 }
 div.animation div {
   background: rgba(255, 255, 255, 0.3490196078);
