@@ -13,12 +13,13 @@ class Calculator {
 
   delete() {
     this.currentOperand = this.currentOperand.toString().slice(0, -1)
+    if (this.currentOperand === '') this.currentOperand = '0'
   }
 
   appendNumber(number) {
-    if (number === '.' && this.currentOperand.includes('.')) return
+    if (number === '.' && this.currentOperand.includes('.')) return;
     if (number === '.' && this.currentOperand === '') return this.currentOperand = '0.'
-    this.currentOperand = this.currentOperand.toString() + number.toString();
+    this.currentOperand = this.currentOperand.toString() + number.toString()
   }
 
   chooseOperation(operation) {
@@ -26,6 +27,11 @@ class Calculator {
     if (this.previousOperand !== '') {
       this.compute()
     }
+    if (this.previousOperand !== '' && this.currentOperand === '') {
+      this.operation = operation
+    }
+
+
     this.operation = operation
     this.previousOperand = this.currentOperand
     this.currentOperand = ''
