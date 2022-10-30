@@ -69,7 +69,7 @@ class Calculator {
         return
     }
 
-    this.currentOperand = computation.toPrecision(12)
+    this.currentOperand = computation
     this.operation = undefined
     this.previousOperand = ''
 
