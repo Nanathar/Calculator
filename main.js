@@ -26,6 +26,11 @@ class Calculator {
     if (this.previousOperand !== '' && this.currentOperand === '') this.operation = operation
     if (this.currentOperand === '') return
     if (this.previousOperand !== '') {
+      this.previousOperand = this.previousOperand.innerText
+      if (this.currentOperand.toString() === '0' && this.operation.toString() === '÷') {
+        this.clear()
+        return
+      }
       this.compute()
       this.operation = operation
     }
@@ -51,6 +56,10 @@ class Calculator {
         computation = prev * curr
         break
       case '÷':
+        if (curr === 0) {
+          this.clear()
+          return
+        }
         computation = prev / curr
         break
       case '%':
