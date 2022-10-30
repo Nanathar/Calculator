@@ -67,7 +67,7 @@ class Calculator {
       default:
         return
     }
-    this.currentOperand = computation
+    this.currentOperand = computation.toPrecision(100)
     this.operation = undefined
     this.previousOperand = ''
   }
@@ -243,6 +243,10 @@ window.addEventListener("keydown", (e) => {
   }
   if (e.code === 'NumpadEnter' || e.code === 'Enter') {
     calculator.compute()
+    calculator.updateDisplay()
+  }
+  if (e.code === 'Backspace') {
+    calculator.delete()
     calculator.updateDisplay()
   }
 });
