@@ -16,6 +16,11 @@ class Calculator {
     if (this.currentOperand === '') this.currentOperand = '0'
   }
 
+  clickAnimation(div) {
+    this.div = div
+    console.log(div)
+  }
+
   appendNumber(number) {
     if (number === '.' && this.currentOperand.includes('.')) return;
     if (number === '.' && this.currentOperand === '') return this.currentOperand = '0.'
@@ -111,6 +116,7 @@ const calculator = new Calculator(previous, current);
 
 numberDiv.forEach(div => {
   div.addEventListener('click', () => {
+    calculator.clickAnimation(div);
     calculator.appendNumber(div.innerText);
     calculator.updateDisplay();
   })
