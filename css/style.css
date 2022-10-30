@@ -20,6 +20,10 @@ body.active {
   background: linear-gradient(#dadee6, #555255);
   color: black;
 }
+body.active div.calculator div.buttons div.active {
+  -webkit-animation: clickSecond 1s linear;
+          animation: clickSecond 1s linear;
+}
 body.active div.calculator div.result div.stop-start-animation,
 body.active div.calculator div.result div.color {
   background: linear-gradient(#555255, #dadee6);
@@ -223,31 +227,65 @@ div.stop {
 }
 
 div.calculator div.buttons div.active {
-  -webkit-animation: click 0.4s linear;
-          animation: click 0.4s linear;
+  -webkit-animation: clickFirst 1s linear;
+          animation: clickFirst 1s linear;
 }
 
-@-webkit-keyframes click {
+@-webkit-keyframes clickFirst {
   0% {
-    color: red;
+    color: #09ff00;
+    font-weight: bold;
   }
   98% {
-    color: red;
+    color: #09ff00;
+    font-weight: bold;
   }
   100% {
     color: transparent;
+    font-weight: normal;
   }
 }
 
-@keyframes click {
+@keyframes clickFirst {
   0% {
-    color: red;
+    color: #09ff00;
+    font-weight: bold;
   }
   98% {
-    color: red;
+    color: #09ff00;
+    font-weight: bold;
   }
   100% {
     color: transparent;
+    font-weight: normal;
+  }
+}
+@-webkit-keyframes clickSecond {
+  0% {
+    color: #dadee6;
+    font-weight: bold;
+  }
+  98% {
+    color: #dadee6;
+    font-weight: bold;
+  }
+  100% {
+    color: transparent;
+    font-weight: normal;
+  }
+}
+@keyframes clickSecond {
+  0% {
+    color: #dadee6;
+    font-weight: bold;
+  }
+  98% {
+    color: #dadee6;
+    font-weight: bold;
+  }
+  100% {
+    color: transparent;
+    font-weight: normal;
   }
 }
 @media (max-width: 450px) and (orientation: portrait) {

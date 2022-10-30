@@ -159,5 +159,5 @@ btn.addEventListener('click', (div) => {
       div.classList.remove('active');
     })
   }
-  setTimeout(clickBtn, 100)
+  setTimeout(clickBtn, 200)
 })

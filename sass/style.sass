@@ -18,6 +18,9 @@ body.active
   background: linear-gradient($color2,$color2A)
   color: black
   div.calculator
+    div.buttons
+      div.active
+        animation: clickSecond 1s linear
     div.result
       div.stop-start-animation,
       div.color
@@ -148,15 +151,31 @@ div.stop
 div.calculator
   div.buttons
     div.active
-      animation: click .4s linear
+      animation: clickFirst 1s linear
 
-@keyframes click
+@keyframes clickFirst
   0%
-    color: red
+    color: $click
+    font-weight: bold
   98%
-    color: red
+    color: $click
+    font-weight: bold
+
   100%
     color: transparent
+    font-weight: normal
+
+@keyframes clickSecond
+  0%
+    color: $color2
+    font-weight: bold
+  98%
+    color: $color2
+    font-weight: bold
+
+  100%
+    color: transparent
+    font-weight: normal
 
 +mq(phone)
   div.calculator
