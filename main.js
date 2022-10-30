@@ -17,6 +17,7 @@ class Calculator {
   }
 
   appendNumber(number) {
+    if (this.currentOperand.length > 12) return
     if (number === '.' && this.currentOperand.includes('.')) return;
     if (number === '.' && this.currentOperand === '') return this.currentOperand = '0.'
     this.currentOperand = this.currentOperand.toString() + number.toString()
@@ -67,9 +68,18 @@ class Calculator {
       default:
         return
     }
-    this.currentOperand = computation.toPrecision(100)
+
+    this.currentOperand = computation.toPrecision(12)
     this.operation = undefined
     this.previousOperand = ''
+
+    // if (this.currentOperand.length > 0) {
+    //   if (this.currentOperan.slice(-1) === '0') {
+    //     this.currentOperand = this.currentOperand.slice(0, -1)
+    //   } else if (this.currentOperand.slice(-1) === '.') {
+    //     this.currentOperand = this.currentOperand.slice(0, -1)
+    //   }
+    // }
   }
 
   getDisplayNumber(number) {
