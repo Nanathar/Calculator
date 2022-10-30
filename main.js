@@ -26,7 +26,6 @@ class Calculator {
     if (this.previousOperand !== '' && this.currentOperand === '') this.operation = operation
     if (this.currentOperand === '') return
     if (this.previousOperand !== '') {
-      this.previousOperand = this.previousOperand.innerText
       if (this.currentOperand.toString() === '0' && this.operation.toString() === '÷') {
         this.clear()
         return
@@ -167,3 +166,80 @@ btn.addEventListener('click', (div) => {
   }
   setTimeout(clickBtn, 200)
 })
+
+// przyciski na klawiaturze
+
+// window.addEventListener("keydown", (e) => {
+//   console.log(e.code)
+//   if (e.code === 'Numpad0') {
+//     const zero = document.querySelector('#zero')
+//     calculator.appendNumber(zero.innerText);
+//     calculator.updateDisplay();
+//   }
+//   if (e.code === 'Numpad1') {
+//     const one = document.querySelector('#one')
+//     calculator.appendNumber(one.innerText);
+//     calculator.updateDisplay();
+//   }
+//   if (e.code === 'Numpad2') {
+//     const two = document.querySelector('#two')
+//     calculator.appendNumber(two.innerText);
+//     calculator.updateDisplay();
+//   }
+//   if (e.code === 'Numpad3') {
+//     const three = document.querySelector('#three')
+//     calculator.appendNumber(three.innerText);
+//     calculator.updateDisplay();
+//   }
+//   if (e.code === 'Numpad4') {
+//     const four = document.querySelector('#four')
+//     calculator.appendNumber(four.innerText);
+//     calculator.updateDisplay();
+//   }
+//   if (e.code === 'Numpad5') {
+//     const five = document.querySelector('#five')
+//     calculator.appendNumber(five.innerText);
+//     calculator.updateDisplay();
+//   }
+//   if (e.code === 'Numpad6') {
+//     const six = document.querySelector('#six')
+//     calculator.appendNumber(six.innerText);
+//     calculator.updateDisplay();
+//   }
+//   if (e.code === 'Numpad7') {
+//     const seven = document.querySelector('#seven')
+//     calculator.appendNumber(seven.innerText);
+//     calculator.updateDisplay();
+//   }
+//   if (e.code === 'Numpad8') {
+//     const eight = document.querySelector('#eight')
+//     calculator.appendNumber(eight.innerText);
+//     calculator.updateDisplay();
+//   }
+//   if (e.code === 'Numpad9') {
+//     const nine = document.querySelector('#nine')
+//     calculator.appendNumber(nine.innerText);
+//     calculator.updateDisplay();
+//   }
+//   // if (e.code === 'NumpadDivide') {
+//   //   const divisibility = document.querySelector('#divisibility')
+//   //   calculator.chooseOperation(divisibility.innerText);
+//   //   calculator.updateDisplay();
+//   // }
+//   // if (e.code === 'NumpadMultiply') {
+//   //   const multiplication = document.querySelector('#multiplication')
+//   //   calculator.chooseOperation(multiplication.innerText);
+//   //   calculator.updateDisplay();
+//   // }
+//   // if (e.code === 'NumpadSubtract') {
+//   //   const minus = document.querySelector('#minus')
+//   //   calculator.chooseOperation(minus.innerText);
+//   //   calculator.updateDisplay();
+//   // }
+//   // if (e.code === 'NumpadAdd') {
+//   //   const plus = document.querySelector('#plus')
+//   //   calculator.chooseOperation(plus.innerText);
+//   //   calculator.updateDisplay();
+//   // }
+
+// });
