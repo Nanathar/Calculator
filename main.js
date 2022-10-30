@@ -16,11 +16,6 @@ class Calculator {
     if (this.currentOperand === '') this.currentOperand = '0'
   }
 
-  clickAnimation(div) {
-    this.div = div
-    console.log(div)
-  }
-
   appendNumber(number) {
     if (number === '.' && this.currentOperand.includes('.')) return;
     if (number === '.' && this.currentOperand === '') return this.currentOperand = '0.'
@@ -107,7 +102,6 @@ const operationDiv = document.querySelectorAll('.operation');
 const clearAll = document.querySelector('.clear-all');
 const clear = document.querySelector('.clear');
 const equals = document.querySelector('.equals');
-const result = document.querySelector('.result');
 const current = document.querySelector('.current-operand');
 const previous = document.querySelector('.previous-operand');
 
@@ -116,7 +110,6 @@ const calculator = new Calculator(previous, current);
 
 numberDiv.forEach(div => {
   div.addEventListener('click', () => {
-    calculator.clickAnimation(div);
     calculator.appendNumber(div.innerText);
     calculator.updateDisplay();
   })
@@ -145,17 +138,26 @@ clear.addEventListener('click', () => {
 })
 
 
-
-
-
-
 // Przyciski zmian koloru i stop Animacji
-const divResult = document.querySelector('div.result')
+const result = document.querySelector('.result');
 
-divResult.addEventListener('click', (div) => {
+result.addEventListener('click', (div) => {
   if (div.target.classList.contains('stop-start-animation')) {
     document.querySelector('div.animation').classList.toggle('stop')
   } else if (div.target.classList.contains('color')) {
     document.body.classList.toggle('active');
   }
+})
+
+// Animacja przycisku
+const btn = document.querySelector('.buttons');
+
+btn.addEventListener('click', (div) => {
+  div.target.classList.add('active')
+  const clickBtn = () => {
+    document.querySelectorAll('.click').forEach(div => {
+      div.classList.remove('active');
+    })
+  }
+  setTimeout(clickBtn, 100)
 })

@@ -13,7 +13,7 @@ body
   color: #fff
   font-family: Arial, Helvetica, sans-serif
   +flex(center,center)
-  transition: all .2s linear
+  transition: all .1s linear
 body.active
   background: linear-gradient($color2,$color2A)
   color: black
@@ -38,6 +38,7 @@ div.calculator
     flex-grow: 0.2
     +flex(right, center)
     padding: 0 20px 0 0
+    transition: all .1s linear
     div.previous-operand
       position: absolute
       top: 8%
@@ -83,7 +84,6 @@ div.animation
   bottom: -17%
   +flex(space-around,flex-start)
   width: 100%
-  display: none
   div
     background: #ffffff59
     overflow: hidden
@@ -144,6 +144,19 @@ div.animation
 
 div.stop
   display: none
+
+div.calculator
+  div.buttons
+    div.active
+      animation: click .4s linear
+
+@keyframes click
+  0%
+    color: red
+  98%
+    color: red
+  100%
+    color: transparent
 
 +mq(phone)
   div.calculator

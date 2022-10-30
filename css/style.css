@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.2s linear;
+  transition: all 0.1s linear;
 }
 
 body.active {
@@ -45,6 +45,7 @@ div.calculator div.result {
   justify-content: right;
   align-items: center;
   padding: 0 20px 0 0;
+  transition: all 0.1s linear;
 }
 div.calculator div.result div.previous-operand {
   position: absolute;
@@ -103,7 +104,6 @@ div.animation {
   justify-content: space-around;
   align-items: flex-start;
   width: 100%;
-  display: none;
 }
 div.animation div {
   background: rgba(255, 255, 255, 0.3490196078);
@@ -222,6 +222,34 @@ div.stop {
   display: none;
 }
 
+div.calculator div.buttons div.active {
+  -webkit-animation: click 0.4s linear;
+          animation: click 0.4s linear;
+}
+
+@-webkit-keyframes click {
+  0% {
+    color: red;
+  }
+  98% {
+    color: red;
+  }
+  100% {
+    color: transparent;
+  }
+}
+
+@keyframes click {
+  0% {
+    color: red;
+  }
+  98% {
+    color: red;
+  }
+  100% {
+    color: transparent;
+  }
+}
 @media (max-width: 450px) and (orientation: portrait) {
   div.calculator {
     height: 300px;
