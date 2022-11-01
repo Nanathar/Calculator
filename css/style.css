@@ -58,7 +58,7 @@ div.calculator div.result div.previous-operand {
 }
 div.calculator div.result div.current-operand {
   height: 30px;
-  margin: 30px 0 -20px;
+  margin: 30px 0 -30px;
   font-size: 27px;
 }
 div.calculator div.result div.stop-start-animation,
