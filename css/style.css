@@ -108,6 +108,7 @@ div.animation {
   justify-content: space-around;
   align-items: flex-start;
   width: 100%;
+  display: none;
 }
 div.animation div {
   background: rgba(255, 255, 255, 0.3490196078);
@@ -298,8 +299,12 @@ div.calculator div.buttons div.active {
     font-size: 17px;
     margin-top: 10px;
   }
+  div.calculator div.result div.previous-operand {
+    font-size: 14px;
+  }
   div.calculator div.result div.current-operand {
-    font-size: 22px;
+    font-size: 18px;
+    margin: 15px 0 -30px;
   }
   div.calculator div.result div.stop-start-animation,
 div.calculator div.result div.color {

@@ -68,18 +68,20 @@ class Calculator {
       default:
         return
     }
+    
+    this.currentOperand = computation.toPrecision(12)
+    if (this.currentOperand.length >= 0) {
+      while (this.currentOperand.slice(-1) === '0') {
+        this.currentOperand = this.currentOperand.slice(0, -1)
+      }
+      if (this.currentOperand.slice(-1) === '.') {
+        this.currentOperand = this.currentOperand.toString().slice(0, -1)
+      }
+    }
 
-    this.currentOperand = computation
     this.operation = undefined
     this.previousOperand = ''
 
-    // if (this.currentOperand.length > 0) {
-    //   if (this.currentOperan.slice(-1) === '0') {
-    //     this.currentOperand = this.currentOperand.slice(0, -1)
-    //   } else if (this.currentOperand.slice(-1) === '.') {
-    //     this.currentOperand = this.currentOperand.slice(0, -1)
-    //   }
-    // }
   }
 
   getDisplayNumber(number) {

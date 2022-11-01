@@ -87,6 +87,7 @@ div.animation
   bottom: -17%
   +flex(space-around,flex-start)
   width: 100%
+  display: none
   div
     background: #ffffff59
     overflow: hidden
@@ -185,8 +186,11 @@ div.calculator
       flex-grow: 0.25
       font-size: 17px
       margin-top: 10px
+      div.previous-operand
+        font-size: 14px
       div.current-operand
-        font-size: 22px
+        font-size: 18px
+        margin: 15px 0 -30px
       div.stop-start-animation,
       div.color
         height: 15px
