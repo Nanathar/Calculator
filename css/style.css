@@ -108,7 +108,6 @@ div.animation {
   justify-content: space-around;
   align-items: flex-start;
   width: 100%;
-  display: none;
 }
 div.animation div {
   background: rgba(255, 255, 255, 0.3490196078);
