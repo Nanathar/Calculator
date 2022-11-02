@@ -54,7 +54,8 @@ div.calculator div.result {
 }
 div.calculator div.result div.previous-operand {
   position: absolute;
-  top: 8%;
+  top: 6%;
+  font-size: 21px;
 }
 div.calculator div.result div.current-operand {
   height: 30px;
@@ -65,19 +66,22 @@ div.calculator div.result div.stop-start-animation,
 div.calculator div.result div.color {
   position: absolute;
   top: 2%;
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
   border-radius: 50%;
   background: linear-gradient(#dc53cf, #2e70ff);
   border-top: 1px solid rgba(255, 255, 255, 0.5019607843);
   border-left: 1px solid rgba(255, 255, 255, 0.5019607843);
   cursor: pointer;
-  font-size: 11px;
+  font-size: 13px;
   text-align: center;
-  line-height: 20px;
+  line-height: 25px;
 }
 div.calculator div.result div.color {
-  left: 83%;
+  left: 3%;
+}
+div.calculator div.result div.stop-start-animation {
+  left: 12%;
 }
 div.calculator div.buttons {
   flex-grow: 0.8;
@@ -288,10 +292,85 @@ div.calculator div.buttons div.active {
     font-weight: normal;
   }
 }
+@media (max-width: 1024px) and (orientation: landscape) {
+  div.calculator {
+    height: 400px;
+    width: 500px;
+  }
+  div.calculator div.result {
+    flex-grow: 0.2;
+    margin-top: 11px;
+  }
+  div.calculator div.result div.previous-operand {
+    font-size: 21px;
+  }
+  div.calculator div.result div.current-operand {
+    font-size: 26px;
+    margin: 20px 0 -25px;
+  }
+  div.calculator div.result div.stop-start-animation,
+div.calculator div.result div.color {
+    height: 25px;
+    width: 25px;
+    font-size: 14px;
+    line-height: 25px;
+  }
+  div.calculator div.result div.color {
+    left: 5%;
+  }
+  div.calculator div.result div.stop-start-animation {
+    left: 13%;
+  }
+  div.calculator div.buttons {
+    font-size: 21px;
+  }
+  div.animation div {
+    height: 30px;
+    width: 30px;
+  }
+}
+@media (max-width: 700px) and (orientation: landscape) {
+  div.calculator {
+    height: 270px;
+    width: 300px;
+  }
+  div.calculator div.result {
+    flex-grow: 0.3;
+    font-size: 18px;
+    margin-top: 11px;
+  }
+  div.calculator div.result div.previous-operand {
+    font-size: 15px;
+  }
+  div.calculator div.result div.current-operand {
+    font-size: 18px;
+    margin: 15px 0 -20px;
+  }
+  div.calculator div.result div.stop-start-animation,
+div.calculator div.result div.color {
+    height: 20px;
+    width: 20px;
+    font-size: 9px;
+    line-height: 20px;
+  }
+  div.calculator div.result div.color {
+    left: 5%;
+  }
+  div.calculator div.result div.stop-start-animation {
+    left: 14%;
+  }
+  div.calculator div.buttons {
+    font-size: 15px;
+  }
+  div.animation div {
+    height: 30px;
+    width: 30px;
+  }
+}
 @media (max-width: 450px) and (orientation: portrait) {
   div.calculator {
-    height: 300px;
-    width: 200px;
+    height: 400px;
+    width: 300px;
   }
   div.calculator div.result {
     flex-grow: 0.25;
@@ -303,7 +382,7 @@ div.calculator div.buttons div.active {
   }
   div.calculator div.result div.current-operand {
     font-size: 18px;
-    margin: 15px 0 -30px;
+    margin: 15px 0 -20px;
   }
   div.calculator div.result div.stop-start-animation,
 div.calculator div.result div.color {
@@ -313,7 +392,10 @@ div.calculator div.result div.color {
     line-height: 15px;
   }
   div.calculator div.result div.color {
-    left: 73%;
+    left: 5%;
+  }
+  div.calculator div.result div.stop-start-animation {
+    left: 14%;
   }
   div.calculator div.buttons {
     font-size: 14px;
@@ -324,37 +406,5 @@ div.calculator div.result div.color {
   }
   div.animation div.eight {
     display: none;
-  }
-}
-@media (max-width: 700px) and (orientation: landscape) {
-  div.calculator {
-    height: 270px;
-    width: 370px;
-  }
-  div.calculator div.result {
-    flex-grow: 0.3;
-    font-size: 18px;
-    margin-top: 11px;
-  }
-  div.calculator div.result div.current-operand {
-    font-size: 22px;
-    margin: 20px 0 0;
-  }
-  div.calculator div.result div.stop-start-animation,
-div.calculator div.result div.color {
-    height: 15px;
-    width: 15px;
-    font-size: 8px;
-    line-height: 15px;
-  }
-  div.calculator div.result div.color {
-    left: 85%;
-  }
-  div.calculator div.buttons {
-    font-size: 17px;
-  }
-  div.animation div {
-    height: 30px;
-    width: 30px;
   }
 }/*# sourceMappingURL=style.css.map */

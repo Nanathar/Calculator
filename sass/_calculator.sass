@@ -1,0 +1,78 @@
+body
+  min-height: 100vh
+  overflow: hidden
+  background: linear-gradient($color1,$color1A)
+  color: #fff
+  font-family: Arial, Helvetica, sans-serif
+  +flex(center,center)
+  transition: all .1s linear
+body.active
+  background: linear-gradient($color2,$color2A)
+  color: black
+  div.calculator
+    div.buttons
+      div.active
+        animation: clickSecond 1s linear
+    div.result
+      div.stop-start-animation,
+      div.color
+        background: linear-gradient($color2A,$color2)
+        border-style: none
+
+div.calculator
+  display: flex
+  flex-direction: column
+  height: 550px
+  width: 400px
+  +bcgBorder
+  backdrop-filter: blur(5px)
+  border-top: 1px solid $border
+  border-left: 1px solid $border
+  z-index: 999
+  overflow: hidden
+  div.result
+    flex-grow: 0.2
+    +flex(right, center)
+    padding: 0 20px 0 0
+    transition: all .1s linear
+    div.previous-operand
+      position: absolute
+      top: 6%
+      font-size: 21px
+    div.current-operand
+      height: 30px
+      margin: 30px 0 -30px
+      font-size: 27px
+    div.stop-start-animation,
+    div.color
+      position: absolute
+      top: 2%
+      height: 25px
+      width: 25px
+      border-radius: 50%
+      background: linear-gradient($color1A,$color1)
+      border-top: 1px solid $border
+      border-left: 1px solid $border
+      cursor: pointer
+      font-size: 13px
+      text-align: center
+      line-height: 25px
+    div.color
+      left: 3%
+    div.stop-start-animation
+      left: 12%
+  div.buttons
+    flex-grow: 0.8
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    justify-items: center
+    cursor: pointer
+    font-size: 22px
+    div
+      +flex(center,center)
+      height: 90%
+      width: 90%
+      transition: all .3s linear
+      border-radius: 20px
+    div:hover
+      +bcgBorder

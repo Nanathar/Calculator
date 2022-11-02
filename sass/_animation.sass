@@ -1,0 +1,96 @@
+div.animation
+  position: absolute
+  bottom: -17%
+  +flex(space-around,flex-start)
+  width: 100%
+  div
+    background: #ffffff59
+    overflow: hidden
+    animation: divAni 10s linear infinite
+    height: 100px
+    width: 100px
+  div.one
+    +divAnime(3s,scale(0.2))
+  div.two
+    +divAnime(6s,scale(0.5))
+  div.three
+    +divAnime(0s,scale(1.9))
+  div.four
+    +divAnime(7s,scale(0.3))
+  div.five
+    +divAnime(1s,scale(1.5))
+  div.six
+    +divAnime(2s,scale(0.3))
+  div.seven
+    +divAnime(5s,scale(1.2))
+  div.eight
+    +divAnime(2.5s,scale(0.6))
+
+@keyframes divAni
+  100%
+    transform: translateY(calc( (100vh - 550px) / 2 - 100vh ))
+
+div.animation
+  div:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    overflow: hidden
+    height: 100px
+    width: 30%
+    transform: skew(45deg) translateX(150px)
+    background: rgba(255,255,255,0.2)
+    animation: mirror 3s linear infinite
+  div.one:before
+    animation-delay: 3s
+  div.two:before
+    animation-delay: 6s
+  div.three:before
+    animation-delay: 2s
+  div.four:before
+    animation-delay: 7s
+  div.five:before
+    animation-delay: 5s
+  div.six:before
+    animation-delay: 8s
+  div.seven:before
+    animation-delay: 5s
+
+@keyframes mirror
+  100%
+    transform: translateX(-450px)
+
+div.stop
+  display: none
+
+div.calculator
+  div.buttons
+    div.active
+      animation: clickFirst 1s linear
+
+@keyframes clickFirst
+  0%
+    color: $click
+    font-weight: bold
+  98%
+    color: $click
+    font-weight: bold
+
+  100%
+    color: transparent
+    font-weight: normal
+
+@keyframes clickSecond
+  0%
+    color: $color2
+    font-weight: bold
+  98%
+    color: $color2
+    font-weight: bold
+
+  100%
+    color: transparent
+    font-weight: normal
+
+
