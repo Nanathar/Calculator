@@ -1,13 +1,13 @@
 body
   min-height: 100vh
   overflow: hidden
-  background: linear-gradient($color1,$color1A)
+  background: linear-gradient($bcg-color1,$bcg-color1A)
   color: #fff
   font-family: Arial, Helvetica, sans-serif
   +flex(center,center)
   transition: all .1s linear
 body.active
-  background: linear-gradient($color2,$color2A)
+  background: linear-gradient($bcg-color2,$bcg-color2A)
   color: black
   div.calculator
     div.buttons
@@ -16,7 +16,7 @@ body.active
     div.result
       div.stop-start-animation,
       div.color
-        background: linear-gradient($color2A,$color2)
+        background: linear-gradient($bcg-color2A,$bcg-color2)
         border-style: none
 
 div.calculator
@@ -48,7 +48,7 @@ div.calculator
       height: 25px
       width: 25px
       border-radius: 50%
-      background: linear-gradient($color1A,$color1)
+      background: linear-gradient($bcg-color1A,$bcg-color1)
       border-top: 1px solid $border
       border-left: 1px solid $border
       cursor: pointer
