@@ -176,8 +176,8 @@ div.animation div.eight {
 div.animation div:before {
   content: "";
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   overflow: hidden;
   height: 100px;
   width: 30%;
